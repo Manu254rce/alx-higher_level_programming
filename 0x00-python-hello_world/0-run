@@ -1,0 +1,5 @@
+#!/bin/bash
+
+python_file=PYFILE
+
+python $python_file
