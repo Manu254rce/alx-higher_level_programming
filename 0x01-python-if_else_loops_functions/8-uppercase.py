@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def isupper(str):
+def uppercase(str):
     new_str = ""
     for i in range(len(str)):
         number = ord(str[i])
