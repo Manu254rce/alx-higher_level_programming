@@ -7,4 +7,4 @@ for i in range(122, 96, -1):
     else:
         str += chr(i)
 
-print("{}".format(str))
+print("{}".format(str), end = '')
