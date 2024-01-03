@@ -8,5 +8,4 @@ def isupper(str):
         number -= 32
         char = chr(number)
         new_str += char
-
-    return new_str
+    print("{}".format(new_str))
