@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-def calculator_1():
+from calculator_1 import add, sub, mul, div
+
+
+def calculate():
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a, b)))
@@ -7,5 +10,6 @@ def calculator_1():
     print("{} * {} = {}".format(a, b, mul(a, b)))
     print("{} / {} = {}".format(a, b, div(a, b)))
 
+
 if __name__ == "__main__":
-    calculator_1()
+    calculate()
