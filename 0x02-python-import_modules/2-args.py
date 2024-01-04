@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+import sys
+
 def print_args(*args):
+    args = args[1:]
     if len(args) == 1:
         print("{} argument:".format(len(args)))
     else:
@@ -8,4 +11,4 @@ def print_args(*args):
         print("{} : {}".format(i, arg))
 
 if __name__ == "__main__":
-    print_args()
+    print_args(*sys.argv)
