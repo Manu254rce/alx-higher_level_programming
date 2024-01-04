@@ -7,4 +7,4 @@ def print_var():
 
 
 if __name__ == "__main__":
-    print_var(a)
+    print_var()
