@@ -5,7 +5,3 @@ def no_c(my_string):
         if my_string[i] == 'C' or my_string[i] == 'c':
             my_string[i] = ''
     return(''.join(my_string))
-
-
-if __name__ == "__main__":
-    no_c(my_string)
