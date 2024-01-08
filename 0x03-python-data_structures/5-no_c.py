@@ -8,5 +8,4 @@ def no_c(my_string):
 
 
 if __name__ == "__main__":
-    my_string = "Come and cum"
-    print(no_c(my_string))
+    no_c(my_string)
