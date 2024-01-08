@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+def no_c(my_string):
+    my_string = list(my_string)
+    for i in range(len(my_string) - 1):
+        if my_string[i] == 'C' or my_string[i] == 'c':
+            my_string[i] = ''
+    return(''.join(my_string))
+
+
+if __name__ == "__main__":
+    my_string = "Come and cum"
+    print(no_c(my_string))
