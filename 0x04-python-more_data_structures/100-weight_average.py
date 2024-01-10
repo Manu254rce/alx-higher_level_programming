@@ -2,13 +2,12 @@
 def weight_average(my_list=[]):
     return 0 if not my_list
 
-    prod = 0 
+    prod = 0
     add = 0
-    for i in range(len(my_list)):
-        score, weight = my_list[i]
+    for score, weight in my_list:
         add += weight
         prod += (score * weight)
-        
+
     raise ValueError("Total weight can't be zero") if add == 0
 
     return prod / add
