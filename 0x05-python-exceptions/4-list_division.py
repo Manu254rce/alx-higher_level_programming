@@ -7,9 +7,8 @@ def list_division(my_list_1, my_list_2, list_length):
             if isinstance(my_list_1[i], (int, float)) and
             isinstance(my_list_2[i], (int, float)):
                 division = my_list_1[i] / my_list_2[i]
-                new_list.append(division)
         except TypeError:
-                print("wrong type")
+            print("wrong type")
         except ZeroDivisionError:
             print("division by 0")
         except IndexError:
