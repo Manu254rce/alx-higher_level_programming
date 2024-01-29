@@ -74,6 +74,6 @@ class Rectangle:
         Functio that prints formatted strings according
         to rectangle attributes
         """
-        if self.__width == 0 and self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#"*self.__width]*self.__height)
