@@ -33,7 +33,7 @@ class Rectangle:
         """
         This is the getter function for the height attribute
         """
-        return self.height
+        return self._height
 
     @width.setter
     def width(self, value):
@@ -58,3 +58,12 @@ class Rectangle:
         elif int(value) < 0:
             raise ValueError("height must be >= 0")
         self._height = value
+
+if __name__ == "__main__":
+    Rectangle = __import__('1-rectangle').Rectangle
+    my_rectangle = Rectangle(2, 4)
+    print(my_rectangle.__dict__)
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(my_rectangle.__dict__)
