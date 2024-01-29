@@ -18,22 +18,22 @@ class Rectangle:
             @width (int): the width of the rectangle
             @height (int): the height of the rectangle
         """
-        self._width = width
-        self._height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """
         This function gets the private attribute width
         """
-        return self._width
+        return self.__width
 
     @property
     def height(self):
         """
         This is the getter function for the height attribute
         """
-        return self._height
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -45,7 +45,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         elif int(value) < 0:
             raise ValueError("width must be >= 0")
-        self._width = value
+        self.__width = value
 
     @height.setter
     def height(self, value):
@@ -57,13 +57,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         elif int(value) < 0:
             raise ValueError("height must be >= 0")
-        self._height = value
-
-if __name__ == "__main__":
-    Rectangle = __import__('1-rectangle').Rectangle
-    my_rectangle = Rectangle(2, 4)
-    print(my_rectangle.__dict__)
-
-    my_rectangle.width = 10
-    my_rectangle.height = 3
-    print(my_rectangle.__dict__)
+        self.__height = value
