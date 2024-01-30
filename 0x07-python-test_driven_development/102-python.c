@@ -19,15 +19,20 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	string = PyUnicode_AsUTF8AndSize(p, size);
+	string = PyUnicode_AsUTF8AndSize(p, &size);
 
 	if (string == NULL)
 	{
 		printf(" [ERROR] Invalid UTF-8 String \n");
 		return;
 	}
-
-	printf(" length: %ld\n", size);
-	printf(" string: %s\n", string);
+	
+	printf("[.] string object info\n");
+	if (PyUnicode_IS_COMPACT_ASCII(p))
+		printf(" type: compact ascii\n");
+	else
+		printf(" type: compact unicode object\n");
+	printf(" length: %ld\n", PyUnicode_GET_LENGTH(p));
+	printf(" value: %s\n", string);
 
 }
