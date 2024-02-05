@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def add_attribute(obj, attr, value):
     """
     This function sets a new custom attribute for an object
