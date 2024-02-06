@@ -4,6 +4,7 @@ This is a Python3 code
 """
 
 
+import json
 from sys import argv
 from importlib import import_module
 
@@ -15,7 +16,7 @@ load_json = import_module('6-load_from_json_file').load_from_json_file
 
 try:
     obj = load_json(file)
-except FileNotFoundError:
+except (FileNotFoundError, json.JSONDecodeError):
     obj = []
 
 obj.extend(argv[1:])
