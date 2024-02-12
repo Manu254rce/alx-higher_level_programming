@@ -77,8 +77,6 @@ class Rectangle(Base):
         """
         Setter function for the x attribute
         """
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
         if int(value) < 0:
             raise ValueError("x must be >=0")
         self.__x = value
@@ -88,8 +86,6 @@ class Rectangle(Base):
         """
         Setter function for the y attribute
         """
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
         if int(value) < 0:
             raise ValueError("y must be >=0")
         self.__y = value
