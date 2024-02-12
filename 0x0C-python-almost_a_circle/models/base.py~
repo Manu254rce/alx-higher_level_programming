@@ -6,8 +6,7 @@ This is Python3 code
 
 class Base:
     """
-    This is a Python class which is the 'base' class in this for
-    other classes
+    This is a Python class which is the 'base' class in this case
     """
     __nb_objects = 0
 
@@ -16,7 +15,6 @@ class Base:
         Function that initializes attributes
         """
         if id is not None:
-            self.id = int(id)
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            self.__id = int(id)
+
+        Base.__nb_objects += 1
