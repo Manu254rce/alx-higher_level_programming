@@ -17,6 +17,18 @@ class Rectangle(Base):
         Function that initializes class attributes
         """
         super().__init__(id)
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        if x <= 0:
+            raise ValueError("x must be > 0")
+        if y <= 0:
+            raise ValueError("y must be > 0")
         self.width = width
         self.height = height
         self.x = x
@@ -89,3 +101,27 @@ class Rectangle(Base):
         if int(value) < 0:
             raise ValueError("y must be >=0")
         self.__y = value
+
+    def area(self):
+        """
+        Function that calculates the area of the rectangle
+        """
+        area = self.__width * self.__height
+        return area
+
+    def display(self):
+        """
+        Function that prints ASCII format of the defined rectangle
+        """
+        for _ in range(self.__y):
+            print()
+        for _ in range(self.__height):
+            print(" " *self.__x + "#" * self.__width)
+
+    def __str__(self):
+        """
+        Funtion that returns the string formatting of the
+        rectangle
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
