@@ -1,2 +1,2 @@
- --Shell script that prints all database
+ -- Shell script that prints all database
 SHOW DATABASES;
