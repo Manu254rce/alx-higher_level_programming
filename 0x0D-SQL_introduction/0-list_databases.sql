@@ -1,8 +1,6 @@
-#!/usr/bin/bash
-
+#!/bin/bash
+#shell script that prints all databases
 user='root'
-password='xGOjiagJ3dN'
-host='localhost'
+password='root'
 command='SHOW DATABASES;'
-mysql -u $user -p$password -h $host -e "$command"
-
+mysql -u $user -p$password -e "$command"
