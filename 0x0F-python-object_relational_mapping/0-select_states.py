@@ -1,9 +1,8 @@
-#!/usr/bin/python3
-"""
-Script that lists all states from the database hbtn_0e_0_usa
-"""
 import sys
 import MySQLdb
+"""
+This function lists all states from the database hbtn_0e_0_usa
+"""
 
 if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost",
@@ -13,6 +12,7 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
+
     rows = cur.fetchall()
     for row in rows:
         print(row)
